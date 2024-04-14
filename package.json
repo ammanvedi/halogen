@@ -1,0 +1,47 @@
+{
+  "name": "halogen",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "ui:add": "shadcn-ui add",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@nextui-org/react": "^2.2.10",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@tauri-apps/api": "^1",
+    "@types/node": "^20.12.4",
+    "@types/uuid": "^9.0.8",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "effect": "^2.4.15",
+    "framer-motion": "^11.0.24",
+    "lucide-react": "^0.364.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.2",
+    "tailwindcss-animate": "^1.0.7",
+    "tldraw": "^2.0.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.4",
+    "@tauri-apps/cli": "^1",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "shadcn-ui": "^0.8.0",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.0.2",
+    "vite": "^5.0.0",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.5.0"
+  }
+}
