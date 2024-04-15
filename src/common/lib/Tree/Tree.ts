@@ -136,7 +136,30 @@ const createTree = <Meta>(meta: Meta): Tree<Meta> => {
 	};
 };
 
+const walkToRoot =
+	<Meta>(tree: InternalTreeMap<Meta>) =>
+	(start: TreeNodeID): E.Either<TreeNodeOrRoot<Meta>[], ErrorTree> => {
+		return pipe(
+			getNode(tree)(start),
+			E.flatMap((node) => {
+				const path = [node];
+				let current = node.parent;
+				while (current !== null) {
+					const parent = getNode(tree)(current);
+					if (E.isLeft(parent)) {
+						return E.left(parent.left);
+					}
+					path.push(parent.right);
+					current = parent.right.parent;
+				}
+
+				return E.right(path);
+			}),
+		);
+	};
+
 export const Tree = {
 	addNodeWithParent,
 	createTree,
+	walkToRoot,
 };
