@@ -57,3 +57,5 @@ export type ErrorTree =
 	| ErrorTreeNodeNotFound
 	| ErrorTreeNodeAlreadyExists
 	| ErrorTreeCircularRelationshipCreated;
+
+export type ApplicationError = ErrorTree;

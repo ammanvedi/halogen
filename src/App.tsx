@@ -31,6 +31,7 @@ import {
 	useIsEditing,
 } from "tldraw";
 import "tldraw/tldraw.css";
+
 export class MyshapeTool extends BaseBoxShapeTool {
 	static override id = "Myshape";
 	static override initial = "idle";
